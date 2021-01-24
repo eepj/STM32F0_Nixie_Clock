@@ -60,14 +60,10 @@ void Nixie_InterruptHandler(void) {
 		nixie_s = DS3231_GetSecond();
 
 		nixie_sr = 0;
-		nixie_sr |=
-				((uint64_t) 1 << (nixie_s / 10 + (NIXIE_SECOND_10 * 10) + 1));
-		nixie_sr |=
-				((uint64_t) 1 << (nixie_s % 10 + (NIXIE_SECOND_1 * 10) + 1));
-		nixie_sr |=
-				((uint64_t) 1 << (nixie_m / 10 + (NIXIE_MINUTE_10 * 10) + 1));
-		nixie_sr |=
-				((uint64_t) 1 << (nixie_m % 10 + (NIXIE_MINUTE_1 * 10) + 1));
+		nixie_sr |= ((uint64_t) 1 << (nixie_s / 10 + (NIXIE_SECOND_10 * 10) + 1));
+		nixie_sr |= ((uint64_t) 1 << (nixie_s % 10 + (NIXIE_SECOND_1 * 10) + 1));
+		nixie_sr |= ((uint64_t) 1 << (nixie_m / 10 + (NIXIE_MINUTE_10 * 10) + 1));
+		nixie_sr |= ((uint64_t) 1 << (nixie_m % 10 + (NIXIE_MINUTE_1 * 10) + 1));
 		nixie_sr |= ((uint64_t) 1 << (nixie_h / 10 + (NIXIE_HOUR_10 * 10) + 1));
 		nixie_sr |= ((uint64_t) 1 << (nixie_h % 10 + (NIXIE_HOUR_1 * 10) + 1));
 

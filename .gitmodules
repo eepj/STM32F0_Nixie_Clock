@@ -1,0 +1,3 @@
+[submodule "Firmware/Core/Src/lib/rtc"]
+	path = Firmware/Core/Src/lib/rtc
+	url = https://github.com/eepj/ds3231_for_stm32_hal

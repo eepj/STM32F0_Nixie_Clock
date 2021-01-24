@@ -1,0 +1,20 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP HV5222PLCC
+D 32-Channel, Serial to Parallel Converter w/ Open Drain Outputs, 220V
+K Serial to Parallel Converter Open Drain
+F https://www.microchip.com/wwwproducts/en/HV5222
+$ENDCMP
+#
+$CMP MAX1771
+D 12V or Adjustable, High-Efficiency, Low IQ, DC-DC Controller
+K Adjustable DC-DC Controller
+F https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjDkZDxj6ntAhXP7GEKHf9XANwQFjAAegQIAxAC&url=https%3A%2F%2Fdatasheets.maximintegrated.com%2Fen%2Fds%2FMAX1771.pdf&usg=AOvVaw2dSuyyzougs5Q5zKBuSdiW
+$ENDCMP
+#
+$CMP QS-27-1
+D Single Digit 0-9 Nixie Tube Display
+K Nixie Tube
+$ENDCMP
+#
+#End Doc Library

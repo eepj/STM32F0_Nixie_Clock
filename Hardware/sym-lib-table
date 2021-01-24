@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Nixie_Tube_Clock_Library)(type Legacy)(uri ${KIPRJMOD}/eepj_Nixie_Tube_Clock_Library.lib)(options "")(descr ""))
+  (lib (name STM32L0_Nixie_Tube_Clock-rescue)(type Legacy)(uri ${KIPRJMOD}/STM32L0_Nixie_Tube_Clock-rescue.lib)(options "")(descr ""))
+)

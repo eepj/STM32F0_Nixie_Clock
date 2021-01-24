@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name eepj_Nixie_Tube_Clock_Library)(type KiCad)(uri ${KIPRJMOD}/eepj_Nixie_Tube_Clock_Library.pretty)(options "")(descr ""))
+)

@@ -35,7 +35,7 @@ extern "C"{
 #define NIXIE_SECOND_10			1
 #define NIXIE_SECOND_1			0
 
-void Nixie_Init(I2C_HandleTypeDef *ui2c, TIM_HandleTypeDef * utim);
+void Nixie_Init(I2C_HandleTypeDef *ui2c, TIM_HandleTypeDef *utim);
 void Nixie_InterruptHandler(void);
 
 void Nixie_Shift(uint64_t sr);
@@ -43,11 +43,11 @@ void Nixie_PrintShift(uint64_t sr);
 
 void Nixie_Timer3DelayUs(uint16_t us);
 
-void Nixie_SetDebugUART(UART_HandleTypeDef* uuart);
+void Nixie_SetDebugUART(UART_HandleTypeDef *uuart);
 
-extern TIM_HandleTypeDef* nixie_utim;
-extern I2C_HandleTypeDef* nixie_ui2c;
-extern UART_HandleTypeDef* nixie_uuart;
+extern TIM_HandleTypeDef *nixie_utim;
+extern I2C_HandleTypeDef *nixie_ui2c;
+extern UART_HandleTypeDef *nixie_uuart;
 
 #ifdef __cplusplus
 }

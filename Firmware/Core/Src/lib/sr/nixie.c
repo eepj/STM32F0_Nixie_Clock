@@ -6,16 +6,16 @@
 extern "C"{
 #endif
 
-TIM_HandleTypeDef* _nixie_utim;
-I2C_HandleTypeDef* _nixie_ui2c;
-UART_HandleTypeDef* _nixie_uuart;
+TIM_HandleTypeDef *_nixie_utim;
+I2C_HandleTypeDef *_nixie_ui2c;
+UART_HandleTypeDef *_nixie_uuart;
 
 __weak int __io_putchar(int ch) {
-	#if NIXIE_DEBUG
+#if NIXIE_DEBUG
 	uint8_t temp = ch;
 	HAL_UART_Transmit(_nixie_uuart, &temp, 1, HAL_MAX_DELAY);
 	return ch;
-	#endif
+#endif
 }
 
 void Nixie_Init(I2C_HandleTypeDef *ui2c, TIM_HandleTypeDef *utim) {
@@ -29,7 +29,7 @@ void Nixie_Init(I2C_HandleTypeDef *ui2c, TIM_HandleTypeDef *utim) {
 	HAL_TIM_Base_Start(_nixie_utim);
 }
 
-void Nixie_SetDebugUART(UART_HandleTypeDef* uuart){
+void Nixie_SetDebugUART(UART_HandleTypeDef *uuart) {
 	_nixie_uuart = uuart;
 }
 
@@ -37,9 +37,9 @@ void Nixie_Shift(uint64_t sr) {
 	for (uint8_t i = 0; i < 64; i++) {
 		NIXIE_CLK_LOW;
 		uint64_t bit = ((uint64_t) sr & ((uint64_t) 1 << (63 - i))) >> (63 - i);
-		if (bit){
+		if (bit) {
 			NIXIE_DATA_HIGH;
-		}else{
+		} else {
 			NIXIE_DATA_LOW;
 		}
 		Nixie_Timer3DelayUs(10);
@@ -60,10 +60,14 @@ void Nixie_InterruptHandler(void) {
 		nixie_s = DS3231_GetSecond();
 
 		nixie_sr = 0;
-		nixie_sr |= ((uint64_t) 1 << (nixie_s / 10 + (NIXIE_SECOND_10 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_s % 10 + (NIXIE_SECOND_1 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_m / 10 + (NIXIE_MINUTE_10 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_m % 10 + (NIXIE_MINUTE_1 * 10) + 1));
+		nixie_sr |=
+				((uint64_t) 1 << (nixie_s / 10 + (NIXIE_SECOND_10 * 10) + 1));
+		nixie_sr |=
+				((uint64_t) 1 << (nixie_s % 10 + (NIXIE_SECOND_1 * 10) + 1));
+		nixie_sr |=
+				((uint64_t) 1 << (nixie_m / 10 + (NIXIE_MINUTE_10 * 10) + 1));
+		nixie_sr |=
+				((uint64_t) 1 << (nixie_m % 10 + (NIXIE_MINUTE_1 * 10) + 1));
 		nixie_sr |= ((uint64_t) 1 << (nixie_h / 10 + (NIXIE_HOUR_10 * 10) + 1));
 		nixie_sr |= ((uint64_t) 1 << (nixie_h % 10 + (NIXIE_HOUR_1 * 10) + 1));
 
@@ -90,9 +94,10 @@ void Nixie_PrintShift(uint64_t sr) {
 #endif
 }
 
-void Nixie_Timer3DelayUs(uint16_t us){
-	__HAL_TIM_SET_COUNTER(_nixie_utim,0);
-	while (__HAL_TIM_GET_COUNTER(_nixie_utim) < us);
+void Nixie_Timer3DelayUs(uint16_t us) {
+	__HAL_TIM_SET_COUNTER(_nixie_utim, 0);
+	while (__HAL_TIM_GET_COUNTER(_nixie_utim) < us)
+		;
 }
 
 #ifdef __cplusplus

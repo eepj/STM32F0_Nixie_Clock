@@ -14,8 +14,8 @@ __weak int __io_putchar(int ch) {
 #if NIXIE_DEBUG
 	uint8_t temp = ch;
 	HAL_UART_Transmit(_nixie_uuart, &temp, 1, HAL_MAX_DELAY);
-	return ch;
 #endif
+	return ch;
 }
 
 void Nixie_Init(I2C_HandleTypeDef *ui2c, TIM_HandleTypeDef *utim) {

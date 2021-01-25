@@ -42,9 +42,9 @@ void Nixie_Shift(uint64_t sr) {
 		} else {
 			NIXIE_DATA_LOW;
 		}
-		Nixie_Timer3DelayUs(10);
+		Nixie_TimerDelayMicrosecond(10);
 		NIXIE_CLK_HIGH;
-		Nixie_Timer3DelayUs(10);
+		Nixie_TimerDelayMicrosecond(10);
 	}
 }
 
@@ -90,10 +90,9 @@ void Nixie_PrintShift(uint64_t sr) {
 #endif
 }
 
-void Nixie_Timer3DelayUs(uint16_t us) {
+void Nixie_TimerDelayMicrosecond(uint16_t us) {
 	__HAL_TIM_SET_COUNTER(_nixie_utim, 0);
-	while (__HAL_TIM_GET_COUNTER(_nixie_utim) < us)
-		;
+	while (__HAL_TIM_GET_COUNTER(_nixie_utim) < us);
 }
 
 #ifdef __cplusplus

@@ -41,7 +41,7 @@ void Nixie_InterruptHandler(void);
 void Nixie_Shift(uint64_t sr);
 void Nixie_PrintShift(uint64_t sr);
 
-void Nixie_Timer3DelayUs(uint16_t us);
+void Nixie_TimerDelayMicrosecond(uint16_t us);
 
 void Nixie_SetDebugUART(UART_HandleTypeDef *uuart);
 

@@ -71,7 +71,8 @@ void Nixie_InterruptHandler(void) {
 		NIXIE_OUTPUT_DISABLED;
 		Nixie_Shift(nixie_sr);
 		NIXIE_OUTPUT_ENABLED;
-	} else if (DS3231_IsAlarm2Triggered()) {
+	}
+	if (DS3231_IsAlarm2Triggered()) {
 		DS3231_ClearAlarm2Flag();
 	}
 }

@@ -36,7 +36,7 @@ void Nixie_SetDebugUART(UART_HandleTypeDef *uuart) {
 void Nixie_Shift(uint64_t sr) {
 	for (uint8_t i = 0; i < 64; i++) {
 		NIXIE_CLK_LOW;
-		uint64_t bit = ((uint64_t) sr & ((uint64_t) 1 << (63 - i))) >> (63 - i);
+		uint8_t bit = ((uint64_t) sr >> (63 - i)) & 1;
 		if (bit) {
 			NIXIE_DATA_HIGH;
 		} else {
@@ -60,12 +60,12 @@ void Nixie_InterruptHandler(void) {
 		nixie_s = DS3231_GetSecond();
 
 		nixie_sr = 0;
-		nixie_sr |= ((uint64_t) 1 << (nixie_s / 10 + (NIXIE_SECOND_10 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_s % 10 + (NIXIE_SECOND_1 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_m / 10 + (NIXIE_MINUTE_10 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_m % 10 + (NIXIE_MINUTE_1 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_h / 10 + (NIXIE_HOUR_10 * 10) + 1));
-		nixie_sr |= ((uint64_t) 1 << (nixie_h % 10 + (NIXIE_HOUR_1 * 10) + 1));
+		nixie_sr |= (uint64_t) 1 << (nixie_s / 10 + NIXIE_SECOND_10 * 10 + 1);
+		nixie_sr |= (uint64_t) 1 << (nixie_s % 10 + NIXIE_SECOND_1 * 10 + 1);
+		nixie_sr |= (uint64_t) 1 << (nixie_m / 10 + NIXIE_MINUTE_10 * 10 + 1);
+		nixie_sr |= (uint64_t) 1 << (nixie_m % 10 + NIXIE_MINUTE_1 * 10 + 1);
+		nixie_sr |= (uint64_t) 1 << (nixie_h / 10 + NIXIE_HOUR_10 * 10 + 1);
+		nixie_sr |= (uint64_t) 1 << (nixie_h % 10 + NIXIE_HOUR_1 * 10 + 1);
 
 		Nixie_PrintShift(nixie_sr);
 		NIXIE_OUTPUT_DISABLED;
@@ -81,7 +81,7 @@ void Nixie_PrintShift(uint64_t sr) {
 #if NIXIE_DEBUG
 	for (uint8_t i = 0; i < 64; i++) {
 		char str[2] = { };
-		uint8_t bit = 1 & ((sr >> (63 - i)));
+		uint8_t bit = ((uint64_t) sr >> (63 - i)) & 1;
 		sprintf(str, "%d", (int) bit);
 		printf(str);
 		if ((63 - i) % 10 == 0 && i != 0)

@@ -1,0 +1,21 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,(5.1.6)-1*%
+%TF.CreationDate,2021-01-29T14:11:21+08:00*%
+%TF.ProjectId,STM32F0_Nixie_Clock,53544d33-3246-4305-9f4e-697869655f43,V3.0*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Paste,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW (5.1.6)-1) date 2021-01-29 14:11:21*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%ADD10R,2.600000X3.600000*%
+G04 APERTURE END LIST*
+D10*
+%TO.C,BT101*%
+X172630000Y-97536000D03*
+X201930000Y-97536000D03*
+%TD*%
+M02*

@@ -6,7 +6,7 @@ High DC voltages can cause severe injuries or death. Proceed at your own risk.
 
 ## Hardware 
 ### Files
-* [KiCad Project](./Hardware/STM32F0_Nixie_Clock.pro)
+* [KiCad project](./Hardware/STM32F0_Nixie_Clock.pro)
 * [Schematics](./Hardware/STM32F0_Nixie_Clock.pdf)
 * [Gerber](./main/Hardware/Gerber)
 

@@ -2,7 +2,7 @@
 An STM32 nixie clock project.
 
 ## Disclaimer
-High DC voltages can cause severe injuries. Proceed at your own risk.
+High DC voltages can cause severe injuries or death. Proceed at your own risk.
 
 ## Hardware 
 ### Files

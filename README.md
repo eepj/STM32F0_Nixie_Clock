@@ -5,6 +5,7 @@ An STM32 nixie clock project.
 High DC voltages can cause severe injuries. Proceed at your own risk.
 
 ## Hardware 
+### Files
 * [KiCad Project](./Hardware/STM32F0_Nixie_Clock.pro)
 * [Schematics](./Hardware/STM32F0_Nixie_Clock.pdf)
 * [Gerber](./main/Hardware/Gerber)
@@ -17,8 +18,6 @@ Refer to [BOM](./Hardware/STM32F0_Nixie_Clock_BOM.xlsx):
 * [HV5222 32-channel open-drain serial-to-parallel converter](https://ww1.microchip.com/downloads/en/DeviceDoc/20005418B.pdf)
 
 ## Firmware
-Using STM32Cube framework.
-
 ### Programs
 * Main program: [`main.c`](./Firmware/Core/Src/main.c)
 * Interrupts: [`stm32f0xx_it.c`](/Firmware/Core/Src/stm32f0xx_it.c)

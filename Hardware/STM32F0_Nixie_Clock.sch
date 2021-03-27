@@ -163,17 +163,6 @@ D4_0
 Text GLabel 2100 6800 2    50   Input ~ 0
 D4_1
 $Comp
-L Connector:USB_C_Plug_USB2.0 P101
-U 1 1 5FC47AA7
-P 5650 1750
-F 0 "P101" H 5650 2600 50  0000 C CNN
-F 1 "USB-C Socket" H 5650 2500 50  0000 C CNN
-F 2 "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 5800 1750 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 5800 1750 50  0001 C CNN
-	1    5650 1750
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDD #PWR0115
 U 1 1 5FC4B31C
 P 5650 2650
@@ -1903,4 +1892,19 @@ F 3 "" H 10450 1150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10550 2150 10750 2150
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J101
+U 1 1 605F7351
+P 5650 1750
+F 0 "J101" H 5650 2650 50  0000 C CNN
+F 1 "USB-C Receptacle" H 5650 2550 50  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 5800 1750 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 5800 1750 50  0001 C CNN
+	1    5650 1750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6250 1750
+NoConn ~ 6250 1950
+NoConn ~ 6250 2250
+NoConn ~ 6250 2350
 $EndSCHEMATC

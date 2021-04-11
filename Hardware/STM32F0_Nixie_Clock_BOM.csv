@@ -1,0 +1,49 @@
+Designator,Value,Footprint
+    BT101,CR2032 3V,Battery:BatteryHolder_Keystone_1060_1x2032
+    C101,2.2u,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    C102,100n,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    C103,1u,Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder
+    C104,4.7u,Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder
+    C105,4.7u/400V,Capacitor_SMD:CP_Elec_8x10.5
+    C106,220u/16V,Capacitor_SMD:CP_Elec_6.3x7.7
+    C107,100n,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    C108,100n,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    D101,ES2J,Diode_SMD:D_SMA_Handsoldering
+    DS101,JST PH 2.0mm 11P,Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical
+    DS102,JST PH 2.0mm 11P,Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical
+    DS103,JST PH 2.0mm 11P,Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical
+    DS104,JST PH 2.0mm 11P,Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical
+    DS105,JST PH 2.0mm 11P,Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical
+    DS106,JST PH 2.0mm 11P,Connector_JST:JST_PH_B11B-PH-K_1x11_P2.00mm_Vertical
+    J101,USB-C Receptacle,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12
+    L101,100u/2.2A,Inductor_SMD:L_12x12mm_H8mm
+    NE101,Dot 1,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical
+    NE102,Dot 2,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical
+    NE103,Dot 3,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical
+    NE104,Dot 4,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical
+    Q101,IRF740S,Package_TO_SOT_SMD:TO-263-2
+    R101,10k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R102,4k7,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R103,4k7,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R104,10k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R105,1M1,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R106,R050,Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder
+    R107,10k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R108,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R109,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R110,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R111,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R112,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R113,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R114,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R115,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R116,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    R117,20k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+    RV101,200k,Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical
+    SW101,TL3342,Button_Switch_SMD:SW_SPST_TL3342
+    U101,STM32F042F6P6,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm
+    U102,AMS1117-3.3,Package_TO_SOT_SMD:SOT-223-3_TabPin2
+    U103,DS3231M,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm
+    U104,MAX1771,Package_SO:SO-8_3.9x4.9mm_P1.27mm
+    U105,HV5222PLCC,Package_LCC:PLCC-44_16.6x16.6mm_P1.27mm
+    U106,HV5222PLCC,Package_LCC:PLCC-44_16.6x16.6mm_P1.27mm
